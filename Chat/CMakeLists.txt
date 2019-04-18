@@ -1,0 +1,5 @@
+cmake_minimum_required(VERSION 3.13)
+project(chat)
+include_directories(..)
+add_executable(chat_client chat_client.cc)
+add_executable(chat_server chat_server.cc)

@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.10)
+project(http_server)
+#include_directories(${PROJECT_SOURCE_DIR}/multi_thread)
+aux_source_directory(. SRC)
+add_executable(${PROJECT_NAME} ${SRC} thread_pool.h http_conn.h http_conn.cc main.cc)
+target_link_libraries(${PROJECT_NAME} pthread)
